@@ -1,3 +1,3 @@
-# cml-training
+# cdsw-training
 
-Example files for [Cloudera Machine Learning Training](https://www.cloudera.com/about/training/courses/machine-learning-training.html)
+Example files for Cloudera Data Science Workbench Training, found on [Cloudera Ondemand](https://ondemand.cloudera.com/).

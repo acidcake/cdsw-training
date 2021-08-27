@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,9 +18,9 @@
 # * Python 3.5.3 or higher
 # * pandas 0.25.0 or higher
 # If this code fails to run in a Python 3 session, install the
-# newest version of pandas by running `!pip3 install -U pandas`
+# newest version of pandas by running `!pip install -U pandas`
 
-# How many flights to SFO departed from each airport, and what 
+# How many flights to SFO departed from each airport, and what
 # was the average departure delay (in minutes)?
 
 import numpy as np

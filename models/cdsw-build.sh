@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Example build script used to customize the engine 
+# Example build script used to customize the engine
 # environment for Models in CML
 
 # This file must be moved to the project's root

@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@ delays_sample_pd = flights_pd \
 # to prepare the data, and call the `toPandas()`
 # method to return a pandas DataFrame.
 
-  
+
 # ## Visualizing Data
 
 # To create simple plots in Python, you can import

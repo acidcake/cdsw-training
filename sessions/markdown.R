@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 # # Markdown
 
-# Comments in R code files in CML can 
+# Comments in R code files in CML can
 # use Markdown syntax. For example:
 
 # # Heading 1

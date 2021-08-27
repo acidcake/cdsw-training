@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ flights_df <- read_csv("data/flights.csv")
 # values or outliers
 flights_clean_df <- flights_df %>%
   select(dep_delay, arr_delay) %>%
-  na.omit() %>% 
+  na.omit() %>%
   filter(dep_delay < 400)
 
 # Split the data into an 80% training sample and
@@ -66,10 +66,10 @@ flights_test <- testing(flights_split)
 # ## Specify and Train Model
 
 # To train a model with parsnip, you use one of the
-# model functions listed in the 
+# model functions listed in the
 # [table of models](https://www.tidymodels.org/find/parsnip/)
 # on the parsnip website. You specify an _engine_
-# (typically an R modeling package) using the 
+# (typically an R modeling package) using the
 # `set_engine()` function, then you call the
 # `fit()` function to train the model.
 
@@ -80,7 +80,7 @@ model <- linear_reg() %>%
 
 # ## Evaluate Model
 
-# To evaluate the model, first you use the model to 
+# To evaluate the model, first you use the model to
 # generate predictions for the test sample
 
 # To generate predictions from the trained model, call
@@ -102,14 +102,14 @@ test_results <- bind_cols(
 # [yardstick](https://yardstick.tidymodels.org)
 # package. This function estimates several common
 # model performance metrics
-test_results %>% 
-  metrics(truth = arr_delay, estimate = .pred) 
+test_results %>%
+  metrics(truth = arr_delay, estimate = .pred)
 
 
 # ## Interpret Model
 
 # Display a scatterplot of the actual feature values (x)
-# and target (y) values in the test sample, with the 
+# and target (y) values in the test sample, with the
 # regression line overlaid
 ggplot(flights_test, aes(x = dep_delay, y = arr_delay)) +
   geom_point(color = "steelblue") +

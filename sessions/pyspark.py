@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,6 +23,14 @@
 # Begin by importing `SparkSession`, PySpark's main entry
 # point:
 
+# To ensure that pyspark is in the system path, we'll circumnavigate potential
+# errors with findspark, which is in the requirements file.
+# !pip install findspark
+
+import findspark
+findspark.init()
+
+import pyspark
 from pyspark.sql import SparkSession
 
 # Then call the `getOrCreate()` method of

@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 # # Basic R Package Example
 
-# A deadline is ten calendar days from today. 
+# A deadline is ten calendar days from today.
 # Which date is that?
 
 install.packages("lubridate")

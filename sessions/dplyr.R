@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 # If this code fails to run in an R session, install these
 # packages by running `install.packages(c("readr", "dplyr"))`
 
-# How many flights to SFO departed from each airport, and what 
+# How many flights to SFO departed from each airport, and what
 # was the average departure delay (in minutes)?
 
 library(readr)

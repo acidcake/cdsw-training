@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,15 +17,15 @@
 # This example demonstrates a simple regression modeling
 # task using the using the
 # [`LinearRegression`](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
-# class in the 
+# class in the
 # [`sklearn.linear_model`](http://scikit-learn.org/stable/modules/classes.html#module-sklearn.linear_model)
 # module. The goal is to predict the arrival delay of
 # flights based on the departure delay.
 
 # The code in this file must be run in a Python 3 session
-# and requires the scikit-learn library. If this code 
+# and requires the scikit-learn library. If this code
 # fails to run in a Python 3 session, install
-# scikit-learn by running `!pip3 install -U scikit-learn`
+# scikit-learn by running `!pip install -U scikit-learn`
 
 
 # ## Import Modules
@@ -55,9 +55,9 @@ flights_clean_pd = flights_pd \
 features = flights_clean_pd.filter(['dep_delay'])
 targets = flights_clean_pd.filter(['arr_delay'])
 
-# Split the features and targets each into an 80% 
-# training sample and a 20% test sample, using 
-# scikit-learn's 
+# Split the features and targets each into an 80%
+# training sample and a 20% test sample, using
+# scikit-learn's
 # [`train_test_split`](http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html)
 # function
 train_x, test_x, train_y, test_y = train_test_split(
@@ -93,7 +93,7 @@ model.score(test_x, test_y)
 test_pred = model.predict(test_x)
 
 # Display a scatterplot of the actual feature values (x)
-# and target (y) values in the test sample, with the 
+# and target (y) values in the test sample, with the
 # regression line overlaid
 plt.scatter(test_x, test_y); plt.plot(test_x, test_pred, c='k')
 
@@ -124,7 +124,7 @@ print(predictions)
 
 # Use joblib's `dump` function to persist the model for
 # future use
-dump(model, 'model.joblib') 
+dump(model, 'model.joblib')
 
 # Later, you can use joblib's `load` function to load the
 # saved model in a new Python session

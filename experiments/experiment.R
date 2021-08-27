@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 # Parse command-line arguments. This script expects
 # one argument: the string `true` or `false`:
 arguments <- commandArgs(trailingOnly = TRUE)
-if (length(arguments) > 0 && 
+if (length(arguments) > 0 &&
     tolower(arguments[1]) == "false") {
   fit_intercept <- FALSE
 } else {
@@ -39,7 +39,7 @@ flights_df <- read_csv("data/flights.csv")
 
 flights_clean_df <- flights_df %>%
   select(dep_delay, arr_delay) %>%
-  na.omit() %>% 
+  na.omit() %>%
   filter(dep_delay < 400)
 
 flights_split <- initial_split(
@@ -72,7 +72,7 @@ test_results <- bind_cols(
   flights_test %>% select(dep_delay, arr_delay)
 )
 
-r2 <- test_results %>% 
+r2 <- test_results %>%
   metrics(truth = arr_delay, estimate = .pred) %>%
   filter(.metric == "rsq") %>%
   pull(.estimate)

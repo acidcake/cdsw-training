@@ -1,4 +1,4 @@
-# Copyright 2020 Cloudera, Inc.
+# Copyright 2021 Cloudera, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -41,11 +41,11 @@ library(dplyr)
 
 delays_sample_df <- flights_df %>%
   select(dep_delay, arr_delay) %>%
-  na.omit() %>% 
+  na.omit() %>%
   sample_frac(0.10)
 
 # Alternatively, you could use sparklyr to read data
-# into a Spark DataFrame and prepare the data, then 
+# into a Spark DataFrame and prepare the data, then
 # use the `collect()` function to return an in-memory
 # R data frame.
 
@@ -58,7 +58,7 @@ delays_sample_df <- flights_df %>%
 
 library(ggplot2)
 
-# To create a visualization, call `ggplot()`, passing 
+# To create a visualization, call `ggplot()`, passing
 # a data frame and an aesthetic mapping with `aes()`.
 # Then add layers using `geom_` functions.
 
