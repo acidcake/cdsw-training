@@ -14,6 +14,9 @@
 
 # # Experiments Example with scikit-learn
 
+# Start by explicitly loading the sys module
+import sys
+
 # Parse command-line arguments. This script expects
 # one argument: the string `true` or `false`:
 if len(sys.argv) > 1 and sys.argv[1].lower() == 'false':

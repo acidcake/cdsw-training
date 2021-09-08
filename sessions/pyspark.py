@@ -14,6 +14,12 @@
 
 # # PySpark Example
 
+# ## Copying Files to HDFS
+
+# Spark reads files stored in HDFS, so we'll move our data there.
+!hdfs dfs -mkdir data
+!hdfs dfs -put data/flights.csv data/
+
 # ## Starting a Spark Application
 
 # Spark SQL is Spark's module for working with structured

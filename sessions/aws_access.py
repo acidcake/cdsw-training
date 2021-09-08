@@ -30,7 +30,8 @@ key.get_contents_to_filename('/home/cdsw/data/highway_traffic.csv')
 
 # Now you can query this dataset using the tool of your choice.
 # Since this is a very large data set, you should use
-# a more heavy-duty tool than pandas. I'll use Spark.
+# Spark to filter the dataset before visualization.
+# For more info, see the pyspark section of the course.
 
 !hdfs dfs -mkdir data
 !hdfs dfs -put data/highway_traffic.csv data/
