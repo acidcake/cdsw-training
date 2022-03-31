@@ -12,90 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# # PySpark Example
-
-# ## Copying Files to HDFS
-
-# Spark reads files stored in HDFS, so we'll move our data there.
-!hdfs dfs -mkdir data
-!hdfs dfs -put data/flights.csv data/
-
-# ## Starting a Spark Application
-
-# Spark SQL is Spark's module for working with structured
-# data. PySpark is Spark's Python API. The `pyspark.sql`
-# module exposes Spark SQL functionality to Python.
-
-# Begin by importing `SparkSession`, PySpark's main entry
-# point:
 
 import pyspark
 from pyspark.sql import SparkSession
 
-# Then call the `getOrCreate()` method of
-# `SparkSession.builder` to start a Spark application.
-# This example also gives the Spark application a name:
-
 spark = SparkSession.builder \
-  .appName('cdsw-training-pyspark') \
+  .appName('spark-job') \
   .getOrCreate()
 
-# Now you can use the `SparkSession` named `spark` to read
-# data into Spark.
-
-
-# ## Reading Data
-
-# Read the flights dataset. This data is in CSV format
-# and includes a header row. Spark can infer the schema
-# automatically from the data:
-
 flights = spark.read.csv('data/flights.csv', header=True, inferSchema=True)
-
-# The result is a Spark DataFrame named `flights`.
-
-
-# ## Inspecting Data
-
-# Inspect the DataFrame to gain a basic understanding
-# of its structure and contents.
-
-# Print the number of rows:
-
-flights.count()
-
-# Print the schema:
-
-flights.printSchema()
-
-# Inspect one or more variables (columns):
-
-flights.describe('arr_delay').show()
-flights.describe('arr_delay', 'dep_delay').show()
-
-# Print five rows:
-
-flights.limit(5).show()
-
-# Or more concisely:
-
-flights.show(5)
-
-# Print 20 rows (the default number is 20):
-
-flights.show()
-
-# Use `toPandas()` to return a pandas DataFrame. In CML,
-# this displays in a scrollable grid. For example, return
-# five rows as a pandas DataFrame, then display it:
-
-flights_pd = flights.limit(5).toPandas()
-flights_pd
-
-# Caution: When working with a large Spark DataFrame,
-# limit the number of rows before returning a pandas
-# DataFrame.
-
 
 # ## Transforming Data
 

@@ -1,2 +1,2 @@
 boto>=2.49.0
-findspark>=1.4.2
+pandas>=0.19.2
