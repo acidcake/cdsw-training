@@ -35,7 +35,7 @@ spark = SparkSession.builder \
 
 flights = spark.read.csv('data/flights.csv', header=True, inferSchema=True)
 
-if (willPrint):
+if (will_print):
     flights.printSchema()
 
 
